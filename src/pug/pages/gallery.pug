@@ -1,0 +1,75 @@
+
+extends ../layout/main
+block variable
+  -
+    var title_page = 'Галерея'
+    var id_page = 'id-page-gallery'
+    //- var class_page = 'class-page-gallery'
+    //- var breadcrumbsSubitem = [
+    //-   {
+    //-     label: 'About',
+    //-     link: pagesLink[0].about
+    //-   }
+    //- ]
+  
+block meta
+  title= title_page
+  meta(name='description', content='')
+block head
+    link(rel='stylesheet', href="./assets/styles/main.min.css")
+block scripts
+  script(defer src='./assets/scripts/vendors.bundle.js')
+  script(defer src='./assets/scripts/index.bundle.js')
+  script(defer src='./assets/scripts/gallery.bundle.js')
+block content
+  include ../includes/breadcrumbs.pug
+  section.gallery-section
+    .gallery-section__container
+      .swiper-gallery.swiper
+        .swiper-wrapper
+          .swiper-slide 
+            .swiper-slide__img 
+              img(src="./assets/images/gallery/gallery_1.jpg")
+          .swiper-slide 
+            .swiper-slide__img 
+              img(src="./assets/images/gallery/gallery_2.jpg")
+          .swiper-slide 
+            .swiper-slide__img 
+              img(src="./assets/images/gallery/gallery_3.jpg")
+          .swiper-slide 
+            .swiper-slide__img 
+              img(src="./assets/images/gallery/gallery_4.jpg")
+          .swiper-slide 
+            .swiper-slide__img 
+              img(src="./assets/images/gallery/gallery_5.jpg")
+          .swiper-slide 
+            .swiper-slide__img 
+              img(src="./assets/images/gallery/gallery_6.jpg")
+          .swiper-slide 
+            .swiper-slide__img 
+              img(src="./assets/images/gallery/gallery_7.jpg")
+          .swiper-slide 
+            .swiper-slide__img 
+              img(src="./assets/images/gallery/gallery_8.jpg")
+          .swiper-slide 
+            .swiper-slide__img 
+              img(src="./assets/images/gallery/gallery_9.jpg")
+          .swiper-slide 
+            .swiper-slide__img 
+              img(src="./assets/images/gallery/gallery_10.jpg")
+      .swiper-navigation
+        .swiper-navigation__arow.swiper-navigation__arow-left
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18" fill="none">
+            <path d="M16.6362 9L1.36377 9M1.36377 9L9 1.36377M1.36377 9L9 16.6362" stroke="white" stroke-width="1.5"/>
+          </svg>
+        .swiper-navigation__arow.swiper-navigation__arow-right
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M0 10L17.9997 10M17.9997 10L8.99984 1.00016M17.9997 10L8.99984 18.9998" stroke="white" stroke-width="1.5"/>
+          </svg>
+
+  include ../includes/choose-section.pug
+block footer
+  include ../includes/footer.pug
+
+block header
+  include ../includes/header-white.pug

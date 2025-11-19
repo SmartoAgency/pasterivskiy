@@ -1,0 +1,33 @@
+@import './assets/vars';  // переменные
+@import './assets/smart-grid';  // mixins smartgrid.js
+// libraries
+@import './libs';
+
+// assets
+@import './assets/mixins';  // миксины
+@import './assets/fonts';  // шрифты
+@import './assets/base';  // общие стили
+@import './assets/animation';  // анимации
+@import './assets/class'; // main style
+@import './assets/breadcrubs'; // main style
+@import './assets/description-section'; // main style
+@import './assets/choose-section'; // main style
+
+@import './assets/scroll'; // additional scroll styles could be changed
+
+
+// sass dima
+@import './header';
+@import './footer';
+@import './404';
+@import './loader';
+@import './menu';
+
+// @import '../../pug/components/form/form';
+@import '../../pug/components/toster/toster';
+
+
+//@import 'pages/contacts';
+//@import 'pages/contact';
+//@import 'pages/home';
+@import './assets/templates'; // main style
