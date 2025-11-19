@@ -17,11 +17,40 @@ const config = {
   output: {
     filename: '[name].bundle.js',
   },
+
   module: {
     rules: [
       {
-        test: /\.m?js$/,
-        type: 'javascript/auto',
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+      {
+        test: /\.mjs$/,
+        type: 'javascript/auto', // ✅ ВАЖЛИВО!
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'],
+          },
+        },
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/images/',
+            },
+          },
+        ],
       },
     ],
   },
