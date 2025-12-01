@@ -61,10 +61,13 @@ document.querySelectorAll('.count').forEach(function(element) {
 });
 
 //map
+const existingInitMap = window.initMap;
 window.initMap = function() {
+  if (existingInitMap) existingInitMap();
+
   const mapElement = document.getElementById('map');
   if (!mapElement) {
-    console.error('Map element not found');
+    console.log('Home Map element not found');
     return;
   }
 
