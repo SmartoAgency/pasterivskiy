@@ -10,8 +10,6 @@ import Swiper, {
 
 Swiper.use([EffectFade, Navigation, Pagination, Thumbs, FreeMode, Autoplay, Mousewheel]);
 
-console.log('HOME.JS LOADED!!!');
-
 // swiper main
 const swiperMain = new Swiper('.swiper-main', {
   loop: true,
